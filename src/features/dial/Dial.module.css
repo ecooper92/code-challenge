@@ -1,0 +1,27 @@
+:root {
+  --outer-dial-diameter: 60px;
+  --inner-dial-diameter: 40px;
+  --dial-width: 8px;
+  --dial-height: 158px;
+}
+
+.ellipse {
+  width: var(--inner-dial-diameter);
+  height: var(--inner-dial-diameter);
+  background: transparent radial-gradient(closest-side at 50% 50%, #231F20 0%, #333333 20%, #2D2D2D 49%, #1D1D1D 76%, #000000 100%) 0% 0% no-repeat padding-box;
+  border-radius: 50%;
+  border: calc((var(--outer-dial-diameter) - var(--inner-dial-diameter)) / 2) solid #2F2F2F;
+  position: relative;
+  transition-property: transform;
+  transition-timing-function: linear;
+}
+
+.dial {
+  width: var(--dial-width);
+  height: var(--dial-height);
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  background: transparent url('Polygon 4.png') 0% 0% no-repeat padding-box;
+}

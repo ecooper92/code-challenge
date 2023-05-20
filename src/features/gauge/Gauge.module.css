@@ -1,0 +1,65 @@
+:root {
+  --gauge-diameter: 264px;
+
+  --big-tick-width: 2px;
+  --big-tick-height: 10px;
+  --small-tick-width: 1px;
+  --small-tick-height: 5px;
+}
+
+.ellipse {
+  height: var(--gauge-diameter);
+  width: var(--gauge-diameter);
+  border: 4px solid;
+  border-color: #707070;
+  border-radius: 50%;
+  background: transparent radial-gradient(closest-side at 50% 50%, #231F20 0%, #020202 96%, #000000 98%, #000000 100%) 0% 0% no-repeat padding-box;
+  position:relative;
+}
+
+.numbers {
+  font-family: 'Roboto';
+  font-size: 14px;
+  color:#FFFFFF;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.smallTick {
+  width:var(--small-tick-width);
+  height: var(--small-tick-height);
+  background-color: #707070;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.bigTick {
+  width:var(--big-tick-width);
+  height: var(--big-tick-height);
+  background-color: #707070;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.dial {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  width: 64px;
+  height: 63px;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  background: transparent url('tektonux_v_lightOnDark.png') 0% 0% no-repeat padding-box;
+}
