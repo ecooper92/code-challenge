@@ -60,6 +60,7 @@ function App() {
       <Gauge startAngle={startAngle} endAngle={endAngle} startValue={startValue} endValue={endValue} stepValue={stepValue} value={value} updateInterval={interval}/>
 
       <div className="control-container">
+      <div className="control-row">
         <FormControl sx={{m: 1, width:150}} fullWidth={true}>
           <FormLabel><h3>Value</h3></FormLabel>
           <FormGroup>
@@ -71,6 +72,19 @@ function App() {
           </FormGroup>
         </FormControl>
             
+        <FormControl sx={{m: 1, width:150}} fullWidth={true}>
+          <FormLabel><h3>Value Step</h3></FormLabel>
+          <FormGroup>
+            <FormControlLabel
+              control={
+                <Slider min={1} max={10} step={1} value={stepValue} onChange={(e, v) => setStepValue(v as number)} />
+              }
+              label={stepValue} labelPlacement='bottom'/>
+          </FormGroup>
+        </FormControl>
+      </div>
+
+      <div className="control-row">
         <FormControl sx={{m: 1, width:150}} fullWidth={true}>
           <FormLabel><h3>Value Range</h3></FormLabel>
           <FormGroup>
@@ -86,17 +100,6 @@ function App() {
               label="Ascending"/>
           </FormGroup>
         </FormControl>
-
-        <FormControl sx={{m: 1, width:150}} fullWidth={true}>
-          <FormLabel><h3>Value Step</h3></FormLabel>
-          <FormGroup>
-            <FormControlLabel
-              control={
-                <Slider min={1} max={10} step={1} value={stepValue} onChange={(e, v) => setStepValue(v as number)} />
-              }
-              label={stepValue} labelPlacement='bottom'/>
-          </FormGroup>
-        </FormControl>
             
         <FormControl sx={{m: 1, width:150}} fullWidth={true}>
           <FormLabel><h3>Angle Range</h3></FormLabel>
@@ -108,6 +111,7 @@ function App() {
               label={`[${startAngle - 180} : ${endAngle - 180}]`} labelPlacement='bottom'/>
           </FormGroup>
         </FormControl>
+      </div>
       </div>
     </div>
   );
