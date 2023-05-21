@@ -1,0 +1,36 @@
+:root {
+  --big-tick-width: 2px;
+  --big-tick-height: 10px;
+  --small-tick-width: 1px;
+  --small-tick-height: 5px;
+}
+
+.numbers {
+  font-family: 'Roboto';
+  font-size: 14px;
+  color:#FFFFFF;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.smallTick {
+  width:var(--small-tick-width);
+  height: var(--small-tick-height);
+  background-color: #707070;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.bigTick {
+  width:var(--big-tick-width);
+  height: var(--big-tick-height);
+  background-color: #707070;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}

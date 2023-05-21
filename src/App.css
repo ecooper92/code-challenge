@@ -1,12 +1,21 @@
 .App {
   text-align: center;
-}
-
-.App-header {
   min-height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.control-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.section-container {
+  width:150px;
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+  border: 1px solid #000000
 }
 
