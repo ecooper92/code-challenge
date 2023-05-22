@@ -1,7 +1,10 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import controlsReducer from '../features/controls/controlsSlice';
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    controls: controlsReducer,
+  },
 });
 
 export type AppDispatch = typeof store.dispatch;

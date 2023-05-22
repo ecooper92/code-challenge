@@ -3,7 +3,9 @@
 }
 
 .ellipse {
+  min-height: var(--gauge-diameter);
   height: var(--gauge-diameter);
+  min-width: var(--gauge-diameter);
   width: var(--gauge-diameter);
   border: 4px solid;
   border-color: #707070;

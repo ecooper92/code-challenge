@@ -1,0 +1,16 @@
+.control-container {
+  display: flex;
+  flex-direction: column;
+}
+  
+.control-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.section-container {
+  width:150px;
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+  border: 1px solid #000000
+}
